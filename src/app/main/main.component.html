@@ -1,0 +1,22 @@
+<div class="container">
+	<h3>Login</h3>
+
+	<form #signupForm="ngForm" (ngSubmit)="register(signupForm)" method="post" action="/nombre">
+		<div class="control-form">
+			<label for="name">Ingrese Nombre</label>
+			<input type="text" id="name" name="name" class="" [(ngModel)]="name"  required minlength="4" maxlength="24">
+		</div>
+		<div class="control-form">
+			<label for="last">Ingrese password</label>
+			<input type="text" id="psw" name="psw" class="" [(ngModel)]="psw"> 
+		</div>
+		<input type="submit" value="Entrar!">
+		<input type="reset" value="Borrar" (click)="clear()">
+	
+	</form>
+
+	<div *ngIf="errorLogin" class="error-login">
+		<p>Error usurio incorrecto</p>
+	</div>
+
+</div>

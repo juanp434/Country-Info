@@ -1,0 +1,18 @@
+.container{
+	width: 70%;
+	margin: 10px auto;
+	min-height: 300px;
+}
+
+form{
+	padding: 5px;
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+
+.error-login{
+	text-align: center;
+	color: red;
+}

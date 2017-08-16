@@ -1,0 +1,23 @@
+h3{
+	text-align: center;
+}
+
+.loader{
+	text-align: center;
+	text-decoration: blink;
+	font-weight: bold;
+}
+
+.image{
+	width: 20%;
+}
+
+.country-info{
+	width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.clearfix{
+	clear: both;
+}

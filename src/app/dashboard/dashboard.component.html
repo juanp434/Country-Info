@@ -1,0 +1,27 @@
+<h3>
+  Dashboard
+</h3>
+<div class="pull-right">
+	<p>Hello {{ username }}!</p>
+	<p><a [routerLink]="['/login']">Logout</a></p>
+</div>
+
+<div *ngIf="loader" class="loader clearfix">Please Wait...</div>
+<div class="clearfix">
+	<span>Selecciona tu pais</span>
+	<select id="select" name="select" (change)="moreInfo($event)" >
+		<option *ngFor="let item of countries; let i = index; let first=first" [attr.data-index]="i">{{item.name}}</option>
+	</select>
+</div >
+	
+<div *ngIf="country" class="country-info">
+	<p>Abreviation: {{country.alpha3Code}}</p>
+	<p>Capital: {{country.capital}}</p>
+	<p>Region: {{country.region | uppercase }}</p>
+	<p>Population: {{country.population | number }}</p>
+	<p>Time Zone: {{country.timezones}}</p>
+	<div>
+		<img src="{{country.flag}}" class="image">
+	</div>
+</div>
+
